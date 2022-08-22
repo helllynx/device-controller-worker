@@ -1,0 +1,22 @@
+[package]
+name = "device_controller_worker"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = { version = "0.4.17", features = ["std", "serde"] }
+local-ip-address = "0.4.7"
+reqwest = "0.11.11"
+tokio = { version = "1.20.1", features = ["full"] }
+mini-redis = "0.4.1"
+serde = "1.0.144"
+
+[dependencies.uuid]
+version = "1.1.2"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]
